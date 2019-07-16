@@ -1,5 +1,5 @@
 import {connect} from 'mongoose';
-import {app} from './app';
+import {app} from './src/app';
 
 async function initialize() {
     const url = 'mongodb://localhost:27017/fastfood_store';
