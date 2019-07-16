@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "6160be07-5b4e-4e44-a0d4-c2d711d8c2af",
+		"name": "Fastfood Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All fastfoods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fastfood_store/fastfoods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fastfood_store",
+						"fastfoods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete fastfoods by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fastfood_store/fastfoods/5d2e36b6d777d33635fa7ca0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fastfood_store",
+						"fastfoods",
+						"5d2e36b6d777d33635fa7ca0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update fastfood by id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lanche 123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/fastfood_store/fastfoods/5d2e372924d1a036f1a7f356",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fastfood_store",
+						"fastfoods",
+						"5d2e372924d1a036f1a7f356"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get fastfood by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fastfood_store/fastfoods/5d2e372924d1a036f1a7f356",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fastfood_store",
+						"fastfoods",
+						"5d2e372924d1a036f1a7f356"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New fastfood",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lanche77\",\n    \"ingredients\": [\n        \"Queijo\",\n        \"Brócolis\",\n        \"Beterraba\"\n    ],\n    \"price\": 66.49\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/fastfood_store/fastfoods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fastfood_store",
+						"fastfoods"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
