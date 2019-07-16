@@ -27,7 +27,7 @@ export class FastfoodController {
 
     static async getFastfoodById(req: Request, res: Response, next: NextFunction) {
         try {
-            let fastfood = await FastfoodRepository.getFastfoodById(req.params.id);
+            let fastfood = await FastfoodRepository.getFastfoodById(req.params._id);
             res.json(fastfood);
         } catch (error) {
             next(error);
@@ -35,7 +35,7 @@ export class FastfoodController {
     }
 
     static async patchFastfood(req: Request, res: Response, next: NextFunction) {
-        await FastfoodRepository.updateFastfood(req.params.id, req.body)
+        await FastfoodRepository.updateFastfood(req.params._id, req.body)
         .then((doc) => {
             console.log(`Atualizado Fastfood: \n ${doc}`);
             res.json(doc);
@@ -47,7 +47,7 @@ export class FastfoodController {
     }
 
     static async deleteFastfood(req: Request, res: Response, next: NextFunction) {
-        await FastfoodRepository.deleteFastfood(req.params.id)
+        await FastfoodRepository.deleteFastfood(req.params._id)
         .then((doc) => {
             console.log(`Removido Fastfood: \n ${doc}`);
             res.json(doc);
